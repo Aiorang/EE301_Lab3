@@ -190,7 +190,7 @@ public class playercontroller : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K)&&bulletLeft>0)
         {
-             Instantiate(bullet, shotPoint.position,shotPoint.rotation);
+            Instantiate(bullet, shotPoint.position,shotPoint.rotation);
             anim.SetTrigger("shot");
             bulletLeft -= 1;
         }
@@ -364,6 +364,7 @@ public class playercontroller : MonoBehaviour
         PlayerPrefs.SetInt("BulletPack", bulletPack);
         PlayerPrefs.SetInt("MedKit", MedKit);
         PlayerPrefs.SetInt("Potion", potion);
+        PlayerPrefs.SetInt("Scene", SceneManager.GetActiveScene().buildIndex);
         PlayerPrefs.Save();
     }
 

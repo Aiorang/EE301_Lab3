@@ -41,6 +41,8 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MaxHP = player.GetComponent<playercontroller>().setMaxHP(0);
+        MaxMP = player.GetComponent<playercontroller>().setMaxMP(0);
         HP();
         MP();
         bullet();
